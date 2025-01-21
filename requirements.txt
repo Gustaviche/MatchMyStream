@@ -47,7 +47,7 @@ ipython==8.29.0
 itsdangerous==2.2.0
 jedi==0.19.2
 Jinja2==3.1.4
-joblib==1.4.2
+joblib
 jsonschema==4.23.0
 jsonschema-specifications==2024.10.1
 jupyter_client==8.6.3
@@ -69,12 +69,12 @@ murmurhash==1.0.11
 narwhals==1.14.0
 nest-asyncio==1.6.0
 networkx==3.4.2
-nltk==3.9.1
+nltk
 numba==0.60.0
 numpy==1.26.4
 packaging==24.2
 pandas==2.2.3
-pandas-profiling==3.2.0
+pandas-profiling
 parso==0.8.4
 patsy==1.0.1
 pexpect==4.9.0
