@@ -14,7 +14,7 @@ def background():
     <style>
     /* Fond global pour l'application */
     .stApp {
-        background-image: url('https://raw.githubusercontent.com/Gustaviche/MatchMyStream/refs/heads/main/poster_film.jpg');
+        background-image: url('https://raw.githubusercontent.com/Gustaviche/MatchMyStream/refs/heads/main/poster_films.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
