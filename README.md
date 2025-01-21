@@ -13,14 +13,19 @@ MatchMyStream est une application interactive permettant aux utilisateurs de dé
 Voici une vue d'ensemble des fichiers et dossiers principaux de ce projet :
 
 MatchMyStream/
-├── app.py                 # Point d'entrée de l'application Streamlit
-├── film_utils.py          # Fonctions utilitaires liées aux films
-├── series_utils.py        # Fonctions utilitaires liées aux séries
-├── requirements.txt       # Liste des dépendances
-├── config.py              # Configuration de l'API (ex: clé API TMDB)
-├── poster_film.jpg        # Fond pour les films
-├── poster_series.jpg      # Fond pour les séries
-└── README.md              # Ce fichier
+│
+├── app.py                  # Fichier principal qui lance l'application Streamlit
+├── config.toml             # Fichier de configuration pour l'application
+├── data.py                 # Script Python pour gérer les données (par exemple : import, nettoyage)
+├── df_films.csv            # Fichier CSV contenant les informations sur les films
+├── df_series.csv           # Fichier CSV contenant les informations sur les séries
+├── film_utils.py           # Fichier Python avec des fonctions utilitaires pour les films
+├── poster_film.jpg         # Image d'affiche de film
+├── poster_series.jpg       # Image d'affiche de série
+├── series_utils.py         # Fichier Python avec des fonctions utilitaires pour les séries
+├── LICENSE                 # Fichier de licence du projet
+└── README.md               # Documentation du projet
+
 
 # Technologies utilisées
 * Streamlit : Framework pour la création rapide d'applications interactives.
