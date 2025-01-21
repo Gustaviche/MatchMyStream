@@ -6,15 +6,15 @@ import series_utils
 import data
 
 
-df_movies = data.load_data("/Users/algaumon/Documents/MatchMyStream/df_films.csv", index_col=None)
-df_series = data.load_data("/Users/algaumon/Documents/MatchMyStream/df_series.csv")
+df_movies = data.load_data("https://raw.githubusercontent.com/Gustaviche/MatchMyStream/refs/heads/main/df_films.csv", index_col=None)
+df_series = data.load_data("https://raw.githubusercontent.com/Gustaviche/MatchMyStream/refs/heads/main/df_series.csv")
 
 def background():
     st.markdown("""
     <style>
     /* Fond global pour l'application */
     .stApp {
-        background-image: url('https://github.com/Gustaviche/MatchMyMovie/blob/main/poster_film.jpg?raw=true');
+        background-image: url('https://raw.githubusercontent.com/Gustaviche/MatchMyStream/refs/heads/main/poster_film.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
