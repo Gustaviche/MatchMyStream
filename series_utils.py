@@ -141,7 +141,7 @@ def afficher_series(results):
             with col1:
                 st.subheader(series.get('Titre', 'Titre inconnu'))  # Gérer les titres manquants
             with col2:
-                if st.button(f"**Ma Liste**", key=f"btn_{series.get('Titre', 'film inconnu')}_{series.get('id', 'unknown')}"):
+                if st.button(f"**Ma Liste**", key=f"btn_{series.get('Titre', 'Titre inconnu')}_{series.get('id', 'unknown')}"):
                     mark_as_seen(series)
 
             # Affichage des détails et médias du film
