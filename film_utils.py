@@ -98,7 +98,7 @@ def afficher_films(results):
                 st.subheader(movie.get('Titre', 'Titre inconnu'))  # Gérer les titres manquants
             with col2:
                 # Bouton pour marquer le film comme vu
-                if st.button(f"**Ma Liste**", key=f"btn_{movie.get('Titre', 'film inconnu')}"):
+                if st.button(f"**Ajouter a ma liste**", key=f"btn_{movie.get('Titre', 'film inconnu')}"):
                     film_utils.mark_as_seen(movie)
 
             # Affichage des détails et médias du film

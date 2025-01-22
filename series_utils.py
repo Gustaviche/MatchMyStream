@@ -147,7 +147,7 @@ def afficher_series(results):
                 identifiant = series.get('id', 'unknown')  # Utiliser l'identifiant unique
                 key = f"btn_{titre}_{identifiant}"  # Générer une clé unique avec titre et id
                 
-                if st.button(f"**MAjouter à ma liste**", key=key):
+                if st.button(f"**Ajouter à ma liste**", key=key):
                     mark_as_seen(series)
 
             # Affichage des détails et médias du film
