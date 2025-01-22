@@ -134,14 +134,20 @@ def recommend_series_genres(df_series, user_genres, n_neighbors=10, metric='cosi
 
 def afficher_series(results):
     if results:
-        #st.write("### Films recommandés :")
+        # Pour chaque série dans les résultats
         for series in results:
             # Création de colonnes pour l'affichage
             col1, col2 = st.columns([3, 1])
             with col1:
                 st.subheader(series.get('Titre', 'Titre inconnu'))  # Gérer les titres manquants
+
             with col2:
-                if st.button(f"**Ma Liste**", key=f"btn_{series.get('Titre', 'Titre inconnu')}_{series.get('id', 'unknown')}"):
+                # Utilisation de l'id et du titre pour générer une clé unique
+                titre = series.get('Titre', 'Titre inconnu')
+                identifiant = series.get('id', 'unknown')  # Utiliser l'identifiant unique
+                key = f"btn_{titre}_{identifiant}"  # Générer une clé unique avec titre et id
+                
+                if st.button(f"**Ma Liste**", key=key):
                     mark_as_seen(series)
 
             # Affichage des détails et médias du film
