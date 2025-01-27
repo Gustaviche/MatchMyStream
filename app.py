@@ -171,7 +171,7 @@ with tab2:
             else:
                 st.write("Aucun film trouvé, veuillez écrire d'autres mots-clés.")
 
-    elif selection == "Recommendation par genre":
+    elif selection == "Recommandation par genre":
         st.title("Recommandation de série par genre")
         
         # Sélection du premier genre
