@@ -202,7 +202,7 @@ with tab2:
         genres = ['Action & Adventure', 'Animation', 'Comédie', 'Crime', 'Documentaire', 'Drame', 'Familial', 'Kids', 'Mystère', 'Reality', 'Science-Fiction & Fantastique', 'Soap', 'Talk', 'War & Politics', 'Western']
 
         # Sélection du genre avec st.selectbox (ou st.radio si vous préférez)
-        genre = st.pills(options=genres,key='series')
+        genre = st.pills("Choisissez un genre :",options=genres,key='series')
         if genre:
         # Appeler la fonction pour filtrer et obtenir les films
             results = series_utils.top_10(df_series, genre)
