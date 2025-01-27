@@ -196,7 +196,7 @@ with tab2:
 
     elif selection == "Top 10":
         st.title("Top 10 des meilleures séries")
-        st.subheader("Choisissez un genre pour découvrir les meilleurs films du genre")
+        st.subheader("Choisissez un genre pour découvrir les meilleurs séries du genre")
 
         # Liste des genres
         genres = ['Action & Adventure', 'Animation', 'Comédie', 'Crime', 'Documentaire', 'Drame', 'Familial', 'Kids', 'Mystère', 'Reality', 'Science-Fiction & Fantastique', 'Soap', 'Talk', 'War & Politics', 'Western']
