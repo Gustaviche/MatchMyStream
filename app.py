@@ -71,7 +71,7 @@ tab1, tab2 = st.tabs(["🎥 Films", "📺 Séries"])
 with st.sidebar:
     selection = option_menu(
         menu_title="Menu",  # Titre du menu dans la sidebar
-        options=["Accueil", "Recommendation par genre","Top 10","Ma liste","Déconnexion"],
+        options=["Accueil", "Recommandation par genre","Top 10","Ma liste","Déconnexion"],
         icons=["house-door", "film","bar-chart","clipboard2-check","power"],
         default_index=0,
         orientation="vertical",  # Menu vertical
@@ -105,14 +105,14 @@ with tab1:
             else:
                 st.write("Aucun film trouvé, veuillez écrire d'autres mots-clés.")
 
-    elif selection == "Recommendation par genre":
+    elif selection == "Recommandation par genre":
         st.title("Recommandation de films par genre")
         
         # Sélection du premier genre
-        genre_1 = st.selectbox("Sélectionner un genre", ["", "Action", 'Adventure', 'Animation', "Comedy", "Crime", "Drama", 'Fantasy', 'History', 'Horror', 'Music', 'Mystery', 'Romance', 'Science Fiction', 'Thriller', 'War', 'Western'])
+        genre_1 = st.selectbox("Sélectionner un genre :", ["", "Action", 'Adventure', 'Animation', "Comedy", "Crime", "Drama", 'Fantasy', 'History', 'Horror', 'Music', 'Mystery', 'Romance', 'Science Fiction', 'Thriller', 'War', 'Western'])
         
         # Sélection du deuxième genre (optionnel)
-        genre_2 = st.selectbox("Sélectionner un deuxième genre (optionnel)", ["", "Action", 'Adventure', 'Animation', "Comedy", "Crime", "Drama", 'Fantasy', 'History', 'Horror', 'Music', 'Mystery', 'Romance', 'Science Fiction', 'Thriller', 'War', 'Western'])
+        genre_2 = st.selectbox("Sélectionner un deuxième genre (optionnel) :", ["", "Action", 'Adventure', 'Animation', "Comedy", "Crime", "Drama", 'Fantasy', 'History', 'Horror', 'Music', 'Mystery', 'Romance', 'Science Fiction', 'Thriller', 'War', 'Western'])
         
         # Création de la liste des genres sélectionnés
         user_genres = [genre_1]
@@ -147,7 +147,7 @@ with tab1:
 
     elif selection == "Ma liste":
         # Affichage des films vus
-        st.title("Films déjà vus")
+        st.title("Ma liste")
         
         # Si la liste des films vus contient des films
         film_utils.afficher_ma_liste(df_movies)
@@ -171,14 +171,14 @@ with tab2:
             else:
                 st.write("Aucun film trouvé, veuillez écrire d'autres mots-clés.")
 
-    elif selection == "Recommendation par genre":
-        st.title("Recommandation de films par genre")
+    elif selection == "Recommandation par genre":
+        st.title("Recommandation de série par genre")
         
         # Sélection du premier genre
-        genre_1 = st.selectbox("Sélectionner un genre", ['', 'Action & Adventure', 'Animation', 'Comédie', 'Crime', 'Documentaire', 'Drame', 'Familial', 'Kids', 'Mystère', 'Reality', 'Science-Fiction & Fantastique', 'Soap', 'Talk', 'War & Politics', 'Western'],key='series')
+        genre_1 = st.selectbox("Sélectionner un genre :", ['', 'Action & Adventure', 'Animation', 'Comédie', 'Crime', 'Documentaire', 'Drame', 'Familial', 'Kids', 'Mystère', 'Reality', 'Science-Fiction & Fantastique', 'Soap', 'Talk', 'War & Politics', 'Western'],key='series')
         
         # Sélection du deuxième genre (optionnel)
-        genre_2 = st.selectbox("Sélectionner un deuxième genre (optionnel)", ['', 'Action & Adventure', 'Animation', 'Comédie', 'Crime', 'Documentaire', 'Drame', 'Familial', 'Kids', 'Mystère', 'Reality', 'Science-Fiction & Fantastique', 'Soap', 'Talk', 'War & Politics', 'Western'],key='series2')
+        genre_2 = st.selectbox("Sélectionner un deuxième genre (optionnel) :", ['', 'Action & Adventure', 'Animation', 'Comédie', 'Crime', 'Documentaire', 'Drame', 'Familial', 'Kids', 'Mystère', 'Reality', 'Science-Fiction & Fantastique', 'Soap', 'Talk', 'War & Politics', 'Western'],key='series2')
         
         # Création de la liste des genres sélectionnés
         user_genres = [genre_1]
@@ -195,14 +195,14 @@ with tab2:
             st.write("Veuillez sélectionner au moins un genre pour voir les recommandations.")
 
     elif selection == "Top 10":
-        st.title("Top 10 par genre")
-        st.subheader("Choisissez un genre pour découvrir les meilleurs films du genre")
+        st.title("Top 10 des meilleures séries")
+        st.subheader("Choisissez un genre pour découvrir les meilleurs séries du genre")
 
         # Liste des genres
         genres = ['Action & Adventure', 'Animation', 'Comédie', 'Crime', 'Documentaire', 'Drame', 'Familial', 'Kids', 'Mystère', 'Reality', 'Science-Fiction & Fantastique', 'Soap', 'Talk', 'War & Politics', 'Western']
 
         # Sélection du genre avec st.selectbox (ou st.radio si vous préférez)
-        genre = st.pills("Choisissez un genre", options=genres,key='series')
+        genre = st.pills("Choisissez un genre :",options=genres,key='series')
         if genre:
         # Appeler la fonction pour filtrer et obtenir les films
             results = series_utils.top_10(df_series, genre)
@@ -213,7 +213,7 @@ with tab2:
 
     elif selection == "Ma liste":
         # Affichage des films vus
-        st.title("Séries dans votre liste")
+        st.title("Ma liste")
         
         # Si la liste des films vus contient des films
         series_utils.afficher_ma_liste(df_series)
